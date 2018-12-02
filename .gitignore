@@ -1,0 +1,4 @@
+downloads/*.jpg
+downloads/*.png
+.env
+node_modules
