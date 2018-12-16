@@ -15,4 +15,4 @@ require('dotenv').config({
 });
 
 const client = new _gapi2.default();
-client.downloadImages();
+client.downloadImages('downloads');

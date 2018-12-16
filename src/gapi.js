@@ -62,10 +62,10 @@ class GAPI {
     });
   }
 
-  async downloadImages() {
+  async downloadImages(directory = 'downloads') {
     return this.files("mimeType='image/jpeg' or mimeType='image/png'")
       .then(files => Promise.all(
-        files.map(f => this.download(f.id, f.name)),
+        files.map(f => this.download(f.id, f.name, directory)),
       ))
       .catch((err) => { console.log(err); });
   }
