@@ -3,5 +3,13 @@ import GAPI from './gapi';
 
 require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
-const client = new GAPI();
-client.downloadImages('downloads');
+const run = (downloads) => {
+  const client = new GAPI();
+  client.downloadImages(downloads);
+};
+
+export default run;
+
+if (require.main === module) {
+  run('downloads');
+}
