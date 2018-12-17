@@ -5,7 +5,7 @@ require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 const run = (downloads) => {
   const client = new GAPI();
-  client.downloadImages(downloads);
+  return client.downloadImages(downloads);
 };
 
 export default run;

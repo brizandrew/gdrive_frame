@@ -20,7 +20,7 @@ require('dotenv').config({
 
 const run = downloads => {
   const client = new _gapi2.default();
-  client.downloadImages(downloads);
+  return client.downloadImages(downloads);
 };
 
 exports.default = run;

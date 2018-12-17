@@ -1,3 +1,3 @@
 import gdrive from './index.js';
 
-gdrive('downloads');
+gdrive('downloads-test').then((d) => { console.log(d); });
